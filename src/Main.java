@@ -23,15 +23,21 @@ public class Main {
     public static void task2(){
         System.out.println("Задача 2");
         int clientOS2=1;
-        int clientDeviceYear=2015;
-        String osString;
+        int clientDeviceYear=2014;
+
         if(clientOS2 ==0){
-           osString="Android";
+            if (clientDeviceYear<2015){
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else{
+                System.out.println("Установите версию приложения для iOS по ссылке");
+            }
         } else {
-            osString="IOS";
+            if (clientDeviceYear<2015){
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            } else{
+                System.out.println("Установите версию приложения для Android по ссылке");
+            }
         }
-        String version= clientDeviceYear>2015 ? "": " облегченную ";
-        System.out.println("Установите " + version + " версия приложения для " + osString + " по ссылке");
     }
     public static void task3(){
         System.out.println("Задача 3");
